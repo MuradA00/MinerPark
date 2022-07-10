@@ -74,10 +74,8 @@ $mob-mq: 46.875em;
   position: fixed;
   width: 100%;
   max-width: 320px;
-  min-height: 100vh;
-
+  height: 100vh;
   box-shadow: 10px 0 40px 9px rgb(0 0 0 / 35%);
-  height: 100%;
   background-color: var(--white-clr);
   z-index: 999;
   margin-top: -20px;
