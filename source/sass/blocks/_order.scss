@@ -1,5 +1,18 @@
 .order {
   padding: clamp(3.125rem, 6.875vw, 6.875rem) 0;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    @include psevdo;
+    width: max(23.8vw, 10rem);
+    height: max(23.8vw, 10rem);
+    background-image: url('../../img/sprite/circle-green.svg');
+    background-repeat: no-repeat;
+    right: -10%;
+    top: -50%;
+    background-size: contain;
+    z-index: -1;
+  }
 }
 
 .order-list {

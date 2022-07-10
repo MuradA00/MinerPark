@@ -2,7 +2,7 @@
 <html lang="eng">
 @@include('_head.html',{})
 
-<body>
+<body id="body">
   @@include('_header.html',{})
 
   <main>
@@ -15,11 +15,14 @@
 
 
   @@include('_footer.html',{})
-  <!-- <script type="module">
-    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
-  </script> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/burger.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

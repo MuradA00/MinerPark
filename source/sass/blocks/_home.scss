@@ -8,6 +8,21 @@
   background-position: center;
   position: relative;
   z-index: 10;
+
+  &::after {
+    @include psevdo;
+    width: max(23.8vw, 10rem);
+    height: max(23.8vw, 10rem);
+    background-image: url('../../img/sprite/circle.svg');
+    background-repeat: no-repeat;
+    left: 6%;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+  }
+  @include max-w(45em) {
+    min-height: 70vh;
+  }
   &__body {
     @include max-w(46em) {
       max-width: 100%;
@@ -30,8 +45,8 @@
     font-size: clamp(21px, 4.0625vw, 65px);
     text-transform: uppercase;
     max-width: max(70.625vw, 37.5rem);
-    @include max-w(38.75rem) {
-      max-width: 100%;
+    @include max-w(46.75rem) {
+      max-width: 100% !important;
       &::before {
         content: none !important;
       }
@@ -49,7 +64,9 @@
     span {
       background-color: var(--white-clr);
       color: var(--green-clr);
-      display: block;
+      @include max-w(46em) {
+        display: block;
+      }
     }
   }
   &__subinfo {
@@ -105,4 +122,13 @@
 
     }
   }
+}
+
+.circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: max(20.75vw, 15rem);
+  height: max(35.75vw, 20rem);
+  z-index: -1;
 }

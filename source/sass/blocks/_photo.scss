@@ -1,7 +1,19 @@
 .photo {
   background-image: var(--photo-gradient);
   padding: clamp(55px, 3.8125vw, 61px) 0 clamp(65px, 8.4375vw, 8.4375rem);
-
+  position: relative;
+  z-index: 10;
+  &::after {
+    @include psevdo;
+    width: max(23.8vw, 10rem);
+    height: max(23.8vw, 10rem);
+    background-image: url('../../img/sprite/circle.svg');
+    background-repeat: no-repeat;
+    left: 4%;
+    background-size: cover;
+    bottom: -10%;
+    z-index: -1;
+  }
   &__wrapper {
     margin-top: 38px;
     position: relative;

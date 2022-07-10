@@ -1,6 +1,24 @@
 .consult {
   background: var(--photo-gradient);
   padding: var(--47-spacing) 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  &::after {
+    @include psevdo;
+    width: max(25.8vw, 10rem);
+    height: max(23.8vw, 10rem);
+    background-image: url('../../img/sprite/circle.svg');
+    background-repeat: no-repeat;
+    right: -5%;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    @include max-w($med-q) {
+      top: 0;
+    }
+  }
   &__body {
     display: grid;
     grid-template-columns: 1.1fr 1.65fr;
