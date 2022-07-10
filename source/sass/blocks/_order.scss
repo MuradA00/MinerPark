@@ -1,0 +1,40 @@
+.order {
+  padding: clamp(3.125rem, 6.875vw, 6.875rem) 0;
+}
+
+.order-list {
+  padding-top: clamp(45px, 4.6875vw, 74px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-gap: 3rem 1rem;
+  &__heading {
+    @include al-flex;
+    justify-content: space-between;
+    max-width: 18rem;
+  }
+  &__name {
+    margin-top: 15px;
+  }
+  &__item {
+    flex: 1 1 33.333%;
+  }
+  &__item:nth-child(1) > .order-list__descr {
+      max-width: 300px;
+  }
+  &__item:last-child > .order-list__name {
+    margin-top: 13px;
+  }
+  &__arrow {
+    width: max(10.4375vw, 5.375rem);
+  }
+}
+
+@include max-w($small-q) {
+  .order-list {
+    flex-direction: column;
+    &__item {
+      margin-inline: auto;
+    }
+  }
+}

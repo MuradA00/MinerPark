@@ -1,6 +1,9 @@
 .header {
   color: var(---clr-black);
   padding: var(--20-spacing) 0 var(--31-spacing);
+  &__container {
+    max-width: 96.625em;
+  }
   &__body {
     @include al-flex;
     justify-content: space-between;
@@ -16,10 +19,36 @@
   }
   &__tel-dig {
     color: var(--hover-green-clr);
-    font-size: var(--20-spacing);
+    font-size: clamp(1rem, 1vw, var(--20-spacing));
     font-weight: 600;
     &:hover {
       text-decoration: underline
+    }
+  }
+  .burger {
+    display: grid;
+    grid-gap: 5px;
+    display: none;
+    span {
+      width: 27px;
+      height: 3px;
+      background-color: var(--green-clr)
+    }
+  }
+}
+
+$mob-mq: 46.875em;
+
+@include max-w($mob-mq) {
+  .burger {
+    display: grid !important;
+  }
+  .header {
+    .nav {
+      display: none;
+    }
+    &__tel {
+      margin-right: clamp(15px, 3.125vw, var(--50-spacing));
     }
   }
 }

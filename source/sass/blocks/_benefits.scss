@@ -1,5 +1,5 @@
 .benefits {
-
+  padding: clamp(40px, 3.75vw, 60px) 0;
 }
 
 .benefits-list {
@@ -13,10 +13,11 @@
     flex-direction: column;
     grid-gap: 8.5px;
     color: var(---clr-black);
+    max-width: 20.625rem;
   }
   &__icon {
     box-shadow: 2.2297298908233643px 2.2297298908233643px 14.86486530303955px 0px #00000040;
-    max-width: 55px;
+    width: 55px;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     display: flex;
@@ -30,6 +31,21 @@
   &__descr {
     p {
       font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+  }
+}
+
+@include max-w(50em) {
+  .benefits-list {
+    grid-gap: 3rem;
+    &__item {
+      margin: 0 auto;
+    }
+    &__icon {
+      margin-inline: auto;
+    }
+    &__heading {
+      text-align: center;
     }
   }
 }

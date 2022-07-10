@@ -25,7 +25,7 @@
 }
 
 $med-q: 50em;
-
+$small-q: 34.375em;
 
 ._container {
   max-width: 88.875em;
@@ -46,7 +46,7 @@ $med-q: 50em;
   color: var(--white-clr);
   padding:  clamp(var(--default-size), 1.7375vw, 27px) clamp(1.5rem, 2.625vw, 42px);
   box-shadow: 5px 5px 50px 0px #00000040;
-  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all .25s ease-in-out;
   &:hover {
     background: var(--white-clr);
     box-shadow: 5px 5px 20px 0px #FFFFFF40;
@@ -68,6 +68,9 @@ $med-q: 50em;
     border-radius: 20px;
     background-color: var(--hover-green-clr);
     width: var(--50-spacing);
+  }
+  @include max-w($med-q) {
+    text-align: center;
   }
 }
 

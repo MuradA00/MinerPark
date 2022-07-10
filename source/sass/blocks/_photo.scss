@@ -1,0 +1,62 @@
+.photo {
+  background-image: var(--photo-gradient);
+  padding: clamp(55px, 3.8125vw, 61px) 0 clamp(65px, 8.4375vw, 8.4375rem);
+
+  &__wrapper {
+    margin-top: 38px;
+    position: relative;
+  }
+}
+
+.swiper-btn {
+  position: absolute;
+  background-color: var(--white-clr);
+  width: 47px !important;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  box-shadow: 5.463411808013916px 5.463411808013916px 13.658530235290527px 0px #00000040;
+  transition: .25s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &::after {
+    content: none !important;
+  }
+}
+
+.swiper-button-prev {
+  left: calc(0px - 4.325vw) !important;
+}
+
+.swiper-button-next {
+  right: calc(0px - 4.325vw) !important;
+}
+
+.photo-list {
+
+  &__item {
+    // width: auto !important;
+    height: 305px !important;
+  }
+  @include al-flex;
+  &__image {
+    height: 100%;
+    img, picture {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@include max-w(97.5em) {
+  .swiper-button-next {
+    right: -10px !important;
+  }
+  .swiper-button-prev {
+    left: -10px !important;
+  }
+  .swiper-btn {
+    width: 35px !important;
+    height: 35px !important;
+  }
+}

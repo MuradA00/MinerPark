@@ -1,0 +1,108 @@
+.home {
+  min-height: calc(100vh - 109px);
+  height: 100%;
+  padding: clamp(4rem, 6.25vw, 100px) 0;
+  background-image: url('../../img/home/bg-home.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 10;
+  &__body {
+    @include max-w(46em) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &::before {
+    @include psevdo;
+    left: calc(0px + 21px);
+    top: calc(0px + 21px);
+    background-color: var(--green-clr);
+    border-radius: 50%;
+    filter: blur(3.5em);
+    width: clamp(5rem, 11.56vw, 185px);
+    height: clamp(5rem, 11.56vw, 185px);
+    aspect-ratio: 1 / 1;
+    z-index: -1;
+  }
+  &__title {
+    font-size: clamp(21px, 4.0625vw, 65px);
+    text-transform: uppercase;
+    max-width: max(70.625vw, 37.5rem);
+    @include max-w(38.75rem) {
+      max-width: 100%;
+      &::before {
+        content: none !important;
+      }
+    }
+    position: relative;
+    &::before {
+      @include psevdo;
+      width: clamp(50px, 9.875vw, 9.875rem);
+      height: max(0.34vw,3px);
+      background-color: var(--white-clr);
+      top: -12px;
+      left: 0;
+      border-radius: 2.25em;
+    }
+    span {
+      background-color: var(--white-clr);
+      color: var(--green-clr);
+      display: block;
+    }
+  }
+  &__subinfo {
+    font-size: clamp(16px, 2.6875vw, 43px);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+    line-height: 123%;
+  }
+  &__descr {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(4.5rem, 10vw, 10rem);
+    @include max-w(46em) {
+      flex-direction: column;
+      grid-gap: 1rem;
+    }
+  }
+  &__aside-descr {
+    max-width: 22.1875rem;
+    p {
+     font-size:  clamp(1rem, 1.5vw, 1.5rem);
+    }
+    @include max-w(46em) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &__since {
+    font-size: clamp(.9rem, 1.5vw, 1.5rem);
+    font-weight: 600;
+  }
+  &__btn-row {
+    margin-top: clamp(1rem, 1.875vw, 30px);
+    display: flex;
+    grid-gap: 35px;
+    @include max-w(46em) {
+     flex-direction: column-reverse;
+     align-items: center;
+    }
+  }
+  &__btn--white {
+    background: transparent;
+    color: var(--white-clr);
+    outline: 1.85px solid var(--white-clr);
+    transition: .3s ease-out;
+    &:hover {
+      background: var(--btn-gradient);
+      outline: none;
+      color: var(--white-clr);
+      box-shadow: 5px 5px 50px 0px #00000040;
+
+    }
+  }
+}
