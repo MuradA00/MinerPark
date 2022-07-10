@@ -1,7 +1,6 @@
 .benefits {
   padding: clamp(40px, 3.75vw, 60px) 0;
 }
-
 .benefits-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(21.25rem, 1fr));
@@ -38,8 +37,11 @@
 @include max-w(50em) {
   .benefits-list {
     grid-gap: 3rem;
+    flex-direction: column;
+
     &__item {
       margin: 0 auto;
+      text-align: center;
     }
     &__icon {
       margin-inline: auto;
