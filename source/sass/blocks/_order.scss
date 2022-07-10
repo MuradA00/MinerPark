@@ -46,6 +46,12 @@
 @include max-w($small-q) {
   .order-list {
     flex-direction: column;
+    &__arrow {
+      display: none;
+    }
+    &__heading {
+      max-width: 100%;
+    }
     &__item {
       margin-inline: auto;
     }
