@@ -8,7 +8,6 @@
   background-position: center;
   position: relative;
   z-index: 10;
-
   &::after {
     @include psevdo;
     width: max(23.8vw, 10rem);

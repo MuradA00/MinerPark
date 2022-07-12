@@ -38,7 +38,7 @@
   .benefits-list {
     grid-gap: 3rem;
     flex-direction: column;
-
+    display: flex;
     &__item {
       margin: 0 auto;
       text-align: center;
