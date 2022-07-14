@@ -3,7 +3,7 @@
 }
 .benefits-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(21.25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22.25rem, 1fr));
   padding-top: clamp(2.5rem, 3.75vw, var(--60-size));
   grid-gap: clamp(6rem, 7.5vw, 7.5rem);
   &__item {
@@ -12,7 +12,6 @@
     flex-direction: column;
     grid-gap: 8.5px;
     color: var(---clr-black);
-    max-width: 20.625rem;
   }
   &__icon {
     box-shadow: 2.2297298908233643px 2.2297298908233643px 14.86486530303955px 0px #00000040;
